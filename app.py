@@ -2,13 +2,13 @@ from flask import Flask, render_template, request,  jsonify
 from data import jokes
 import random
 
-
 app = Flask(__name__)
 app.config['JSON_AS_ASCII'] = False
 
+
 # joke generator
 @app.route('/')
-def home():
+def index():
     return render_template('index.html')
 
 # get all jokes (GET)
@@ -62,7 +62,7 @@ def delete_joke(id):
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=8000)
+    app.run(host='0.0.0.0', port=5000)
     
     
    
